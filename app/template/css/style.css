@@ -71,7 +71,9 @@ div#newnote{
 	top: 0;
 	background: #000000c9;
 }
-
+div#readnote h3{
+	margin-bottom: 20px;
+}
 
 div#readnote > div{
 	background: #f3f3f3;
