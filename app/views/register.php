@@ -17,7 +17,7 @@
 			<label>Repeat Password</label>
 			</div>
 			<input type="button" onclick="register();" value="REGISTER">
-			<a href="./login">Already have an account?</a>
+			<a href="<?php echo URL;?>/login">Already have an account?</a>
 		</form>
 	</div>
  <?php require VDIR.'/footer.php' ?>

@@ -34,5 +34,5 @@
 
 		</div>
 	</div>
-	<div id="information">Hoşgeldiniz <?php echo $username;?> <div style="float: right;cursor:pointer;"><a href="./logout">Logout</a></div></div>
+	<div id="information">Hoşgeldiniz <?php echo $username;?> <div style="float: right;cursor:pointer;"><a href="<?php echo URL;?>/logout">Logout</a></div></div>
 <?php require VDIR.'/footer.php' ?>

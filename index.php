@@ -1,8 +1,5 @@
 <?php
 session_start();
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 define('DB_DSN', 'mysql:host=localhost;dbname=uni4society;charset=utf8');
 define('DB_USR', 'root');
 define('DB_PWD', '12345678');
@@ -14,8 +11,9 @@ define('MDIR', APP_DIR.'/models'); // Model dizini
 define('VDIR', APP_DIR.'/views'); // View dizini
 define('CDIR', APP_DIR.'/controllers'); // Controller dizini
 define('TDIR', APP_DIR.'/template'); // Controller dizini
-define('URL', '/blog'); // Sistemin çalışacağı URL
+define('URL', '/mvc2'); // Sistemin çalışacağı URL
 define('TEMPLATE_DIR', URL.'/template/'); // Sistemin çalışacağı URL
+
 require CORE_DIR.'/view.php';
 require CORE_DIR.'/controller.php';
 require CORE_DIR.'/app.php';
@@ -35,7 +33,4 @@ App::run('/lists/delete','lists@deleteAction',['POST'],[],['isloggedin'=>true, '
 App::run('/register','register@index',['GET'],[],['isloggedin'=>false, 'format'=>'redirect', 'redirect'=>URL.'/lists']);
 App::run('/register','register@post',['POST'],[],['isloggedin'=>false, 'format'=>'json', 'jsonmessage'=>'Zaten giriş yaptınız!']);
 App::err404();
-//404 sayfası
-//App::run()
-//App::run('/uye/([0-9A-Za-z]+)/([0-9A-Za-z]+)','uye@index',['GET'],['ad','soyad']);
 ?>

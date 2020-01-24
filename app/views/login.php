@@ -21,7 +21,7 @@ if(event.keyCode == 13){
 			</div>
 
 			<input type="button" onclick="login();" value="LOGIN">
-			<a href="./register">Create an account</a>
+			<a href="<?php echo URL;?>/register">Create an account</a>
 		</form>
 	</div>
 <?php require VDIR.'/footer.php' ?>
